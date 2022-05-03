@@ -1,0 +1,45 @@
+.text-img{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 60px auto 0;
+
+  :first-child {
+    height: 80px;
+  }
+
+  img{
+    width: 100%;
+  }
+  &-I{
+    margin-bottom: 4px;
+  }
+}
+.text-box{
+  max-width: 950px;
+  width: 100%;
+  height: auto;
+  padding: 20px 80px;
+  border-radius: 15px;
+  margin: 30px auto 0;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  background-color: rgba(0,0,0, 0.6);
+  box-shadow: rgba(83, 83, 83, 0.12) 0px 2px 4px 0px, rgba(160, 160, 160, 0.32) 0px 2px 16px 0px;
+
+  p{
+    font-size: 36px;
+  }
+  
+}
+.text-spanI{
+    color: rgb(231, 6, 6);
+    font-size: 32px;
+
+}
+.text-spanII{
+  font-size: 2.1rem
+}

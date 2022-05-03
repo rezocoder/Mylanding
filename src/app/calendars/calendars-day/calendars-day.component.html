@@ -1,0 +1,11 @@
+<div class="card-item"
+  [ngClass]="{  today: day?.isActive, block: currentDate < day.date }"
+ (click)="onDayClick()">
+  <div class="lock"></div>
+  <span>
+    {{ day?.date | date: "d" }}
+  </span>
+  <span>
+    {{ day?.date | date: "MMM" }}
+  </span>
+</div>

@@ -1,0 +1,17 @@
+<app-header></app-header>
+<app-freespins></app-freespins>
+<app-card 
+  (activeDateChanged)="onPlayerDateChanged($event)" 
+  [config]="playerDataDates" 
+  [data]="playerData"
+  *ngIf="playerData" >
+</app-card>
+<app-player-tab >
+</app-player-tab>
+<app-card
+  *ngIf="leaderboardDate"
+  (activeDateChanged)="onLeaderboardDateChanged($event)" 
+  [config]="leaderboardDates" 
+  [data]="leaderboardDate">
+</app-card>
+<app-leaderboard [today]="leaderboardDay"></app-leaderboard>

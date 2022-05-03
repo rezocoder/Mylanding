@@ -1,0 +1,31 @@
+<header class="header" [ngClass]="[hStyle]">
+  <div class="header-box">
+      <nav>
+              <div class="header-logo">
+                  <img src="../../assets/img/Blogo.png" alt="Betlive">
+              </div>
+              <!-- <div>
+                {{"text.title" |translate}}
+              </div> -->
+              <div class="header-flags">
+                  <ul [class]="spacePosition">
+                      <li class="header-flag english">
+
+                              <img
+                                  src="../../assets/img/Flag_Britain.webp"
+                                  alt="eng"
+                                  (click)="changeDefaultLanguage('en'); "
+                              >
+
+                      </li>
+                      <li class="header-flag georgian">
+                              <img
+                                  src="../../assets/img/Flag_Georgia.jpg"
+                                  alt="geo"
+                                  (click)="changeDefaultLanguage('geo');">
+                      </li>
+                  </ul>
+              </div>
+      </nav>
+  </div>
+</header>

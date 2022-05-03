@@ -1,0 +1,23 @@
+<!-- <div class="top">
+  <button (click)="changeDefaultLanguage('en')">Eng</button>
+  <button (click)="changeDefaultLanguage('geo')">Geo</button>
+<div> -->
+
+<div class="text-img">
+  <img class="text-img-I" [src]="'../../assets/img/free'+ language +'.png'" alt="">
+  <img class="text-img-II" [src]="'../../assets/img/25freespins'+ language +'.png'" alt="">
+</div>
+<div class="text-box">
+  <p >
+    {{"box.textI" | translate}}
+    <br>
+    <span class="text-spanI">
+      {{"box.spanTag" | translate}}
+    </span>
+    <span class="text-spanII">
+        {{"box.textII" | translate}}
+    </span>
+
+  </p>
+</div>
+

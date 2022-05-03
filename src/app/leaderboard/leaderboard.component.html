@@ -1,0 +1,40 @@
+<!--<table class="container table table-dark table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>მომხმარებელი</th>
+      <th>ქულა</th>
+      <th>დრო</th>
+      <th>პრიზი</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr  *ngFor="let item of leaderboard">
+      <th>1</th>
+      <td>{{item.name}}</td>
+      <td>{{item.point}}</td>
+      <td>{{item.time | date: "hh:mm:ss"}}</td>
+      <td>{{item.prize}}</td>
+    </tr>
+  </tbody>
+</table>-->
+
+
+
+<div class="leaderboard">
+  <div *ngFor="let item of leaderboard" class="leaderboard__members">
+      <div class="leaderboard__item" >
+        <li class="id">1</li>
+        <li>{{item.name}}</li>
+        <li>{{item.point}}</li>
+        <li>
+          {{item.time | date: 'shortTime'}}
+        </li>
+        <li class="prize">
+          {{item.prize}}
+          <img *ngIf="item.extra" src="{{item.extra}}" alt="">
+          <span *ngIf="!item.extra">0.000.000</span>
+        </li>
+      </div>
+  </div>
+</div>

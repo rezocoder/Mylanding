@@ -1,0 +1,37 @@
+
+<div class="calendar"  [class.card-small]="config.size === 'small'">
+  <div (click)="onRight()" class="calendar-icons left">
+    <img src="../../assets/img/left.png" alt="">
+  </div>
+  <div #cardBoxRef class="calendar-box"
+    *ngIf="data">
+    <div
+      #cardBoxInnerRef
+      class="calendar-boxinner"
+      [style.left]="spaceSlider + 'px'"
+      *ngIf="config.size !== 'small'; else smallCards" >
+      <app-cards-day
+        *ngFor="let day of data.days; "
+        [currentDate]="data.currentDate"
+        [day]="day"
+        (activeDateChanged)="onActivateDay($event)"
+      ></app-cards-day>
+      
+    </div>
+    <ng-template #smallCards>
+      <div #cardBoxInnerRef class="calendar-boxinner small">
+        <app-cards-day
+          [ngClass]="{rotateItemToRight}"
+          [ngClass]="{rotateItemToLeft}"
+          [currentDate]="data.currentDate"
+          [day]="data.days[currentIndex]"
+          [index]="currentIndex"
+          (activeDateChanged)="onActivateDay($event)"
+        ></app-cards-day>
+      </div>
+    </ng-template>
+  </div>
+  <div (click)="onLeft()" class="calendar-icons right">
+    <img src="../../assets/img/right.png" alt="">
+  </div>
+</div>
